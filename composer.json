@@ -1,0 +1,21 @@
+{
+    "name": "sumpygump/rachel",
+    "description": "Refactoring assimilation can help everyone learn",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jansen Price",
+            "email": "jansen.price@gmail.com"
+        }
+    ],
+    "require": {},
+    "bin": {
+        "bin/rachel"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rachel\\": "src/Rachel/"
+        }
+    }
+}

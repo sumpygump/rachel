@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+<?php
+
+# ▄▄▄            ▄         ▄
+# █  █ ▄▄▄   ▄▄▄ █▄▄   ▄▄  █
+# ██▀   ▄▄█ █    █  █ █▄▄█ █
+# █ ▀▄ ▀▄▄█ ▀▄▄▄ █  █ ▀▄▄▄ ▀▄▄
+#
+# Refactoring assimilation can help everyone learn
+
+$command = $argv[1] ?? "today";
+
+$app = require_once(dirname(__DIR__) . "/init.php");
+
+switch ($command) {
+case 'date':
+    if (!isset($argv[2])) {
+        print("Missing argument: date\n");
+        exit(1);
+    }
+    $date = $argv[2];
+    printf("Refactoring for %s: %s\n", $date, $app['catalog']->getForDate($date));
+    break;
+case 'today':
+default:
+    printf("%s: Today's refactoring is: %s\n", date('Y-m-d'), $app['catalog']->getForDate());
+    break;
+}
+
+exit(0);
