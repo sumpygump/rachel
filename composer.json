@@ -10,9 +10,9 @@
         }
     ],
     "require": {},
-    "bin": {
+    "bin": [
         "bin/rachel"
-    },
+    ],
     "autoload": {
         "psr-4": {
             "Rachel\\": "src/Rachel/"
