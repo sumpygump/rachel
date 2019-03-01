@@ -10,7 +10,7 @@ class Catalog
     public function __construct($filename)
     {
         // The start of the reckoning of the catalog
-        $epoch = strtotime("2001-01-01");
+        $this->epoch = strtotime("2001-01-01");
 
         $data = json_decode(file_get_contents($filename));
         $this->populate($data);
@@ -35,10 +35,10 @@ class Catalog
         return $this->getByIndex($day);
     }
 
-    public function getDayIndexForDate($date)
+    public function getDayIndexForDate($date = false)
     {
         if (false === $date) {
-            $time = strtotime('midnight');
+            $time = strtotime(date('Y-m-d'));
         } else {
             $time = strtotime($date);
         }
