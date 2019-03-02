@@ -1,1 +1,530 @@
-[{"name":"Change Function Declaration","url":"https://refactoring.com/catalog/changeFunctionDeclaration.html"},{"name":"Change Reference to Value","url":"https://refactoring.com/catalog/changeReferenceToValue.html"},{"name":"Change Value to Reference","url":"https://refactoring.com/catalog/changeValueToReference.html"},{"name":"Collapse Hierarchy","url":"https://refactoring.com/catalog/collapseHierarchy.html"},{"name":"Combine Functions into Class","url":"https://refactoring.com/catalog/combineFunctionsIntoClass.html"},{"name":"Combine Functions into Transform","url":"https://refactoring.com/catalog/combineFunctionsIntoTransform.html"},{"name":"Consolidate Conditional Expression","url":"https://refactoring.com/catalog/consolidateConditionalExpression.html"},{"name":"Decompose Conditional","url":"https://refactoring.com/catalog/decomposeConditional.html"},{"name":"Encapsulate Collection","url":"https://refactoring.com/catalog/encapsulateCollection.html"},{"name":"Encapsulate Record","url":"https://refactoring.com/catalog/encapsulateRecord.html"},{"name":"Encapsulate Variable","url":"https://refactoring.com/catalog/encapsulateVariable.html"},{"name":"Extract Class","url":"https://refactoring.com/catalog/extractClass.html"},{"name":"Extract Function","url":"https://refactoring.com/catalog/extractFunction.html"},{"name":"Extract Superclass","url":"https://refactoring.com/catalog/extractSuperclass.html"},{"name":"Extract Variable","url":"https://refactoring.com/catalog/extractVariable.html"},{"name":"Hide Delegate","url":"https://refactoring.com/catalog/hideDelegate.html"},{"name":"Inline Class","url":"https://refactoring.com/catalog/inlineClass.html"},{"name":"Inline Function","url":"https://refactoring.com/catalog/inlineFunction.html"},{"name":"Inline Variable","url":"https://refactoring.com/catalog/inlineVariable.html"},{"name":"Introduce Assertion","url":"https://refactoring.com/catalog/introduceAssertion.html"},{"name":"Introduce Parameter Object","url":"https://refactoring.com/catalog/introduceParameterObject.html"},{"name":"Introduce Special Case","url":"https://refactoring.com/catalog/introduceSpecialCase.html"},{"name":"Move Field","url":"https://refactoring.com/catalog/moveField.html"},{"name":"Move Function","url":"https://refactoring.com/catalog/moveFunction.html"},{"name":"Move Statements into Function","url":"https://refactoring.com/catalog/moveStatementsIntoFunction.html"},{"name":"Move Statements to Callers","url":"https://refactoring.com/catalog/moveStatementsToCallers.html"},{"name":"Parameterize Function","url":"https://refactoring.com/catalog/parameterizeFunction.html"},{"name":"Preserve Whole Object","url":"https://refactoring.com/catalog/preserveWholeObject.html"},{"name":"Pull Up Constructor Body","url":"https://refactoring.com/catalog/pullUpConstructorBody.html"},{"name":"Pull Up Field","url":"https://refactoring.com/catalog/pullUpField.html"},{"name":"Pull Up Method","url":"https://refactoring.com/catalog/pullUpMethod.html"},{"name":"Push Down Field","url":"https://refactoring.com/catalog/pushDownField.html"},{"name":"Push Down Method","url":"https://refactoring.com/catalog/pushDownMethod.html"},{"name":"Remove Dead Code","url":"https://refactoring.com/catalog/removeDeadCode.html"},{"name":"Remove Flag Argument","url":"https://refactoring.com/catalog/removeFlagArgument.html"},{"name":"Remove Middle Man","url":"https://refactoring.com/catalog/removeMiddleMan.html"},{"name":"Remove Setting Method","url":"https://refactoring.com/catalog/removeSettingMethod.html"},{"name":"Remove Subclass","url":"https://refactoring.com/catalog/removeSubclass.html"},{"name":"Rename Field","url":"https://refactoring.com/catalog/renameField.html"},{"name":"Rename Variable","url":"https://refactoring.com/catalog/renameVariable.html"},{"name":"Replace Command with Function","url":"https://refactoring.com/catalog/replaceCommandWithFunction.html"},{"name":"Replace Conditional with Polymorphism","url":"https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"},{"name":"Replace Constructor with Factory Function","url":"https://refactoring.com/catalog/replaceConstructorWithFactoryFunction.html"},{"name":"Replace Control Flag with Break","url":"https://refactoring.com/catalog/replaceControlFlagWithBreak.html"},{"name":"Replace Derived Variable with Query","url":"https://refactoring.com/catalog/replaceDerivedVariableWithQuery.html"},{"name":"Replace Error Code with Exception","url":"https://refactoring.com/catalog/replaceErrorCodeWithException.html"},{"name":"Replace Exception with Precheck","url":"https://refactoring.com/catalog/replaceExceptionWithPrecheck.html"},{"name":"Replace Function with Command","url":"https://refactoring.com/catalog/replaceFunctionWithCommand.html"},{"name":"Replace Inline Code with Function Call","url":"https://refactoring.com/catalog/replaceInlineCodeWithFunctionCall.html"},{"name":"Replace Loop with Pipeline","url":"https://refactoring.com/catalog/replaceLoopWithPipeline.html"},{"name":"Replace Magic Literal","url":"https://refactoring.com/catalog/replaceMagicLiteral.html"},{"name":"Replace Nested Conditional with Guard Clauses","url":"https://refactoring.com/catalog/replaceNestedConditionalWithGuardClauses.html"},{"name":"Replace Parameter with Query","url":"https://refactoring.com/catalog/replaceParameterWithQuery.html"},{"name":"Replace Primitive with Object","url":"https://refactoring.com/catalog/replacePrimitiveWithObject.html"},{"name":"Replace Query with Parameter","url":"https://refactoring.com/catalog/replaceQueryWithParameter.html"},{"name":"Replace Subclass with Delegate","url":"https://refactoring.com/catalog/replaceSubclassWithDelegate.html"},{"name":"Replace Superclass with Delegate","url":"https://refactoring.com/catalog/replaceSuperclassWithDelegate.html"},{"name":"Replace Temp with Query","url":"https://refactoring.com/catalog/replaceTempWithQuery.html"},{"name":"Replace Type Code with Subclasses","url":"https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html"},{"name":"Return Modified Value","url":"https://refactoring.com/catalog/returnModifiedValue.html"},{"name":"Separate Query from Modifier","url":"https://refactoring.com/catalog/separateQueryFromModifier.html"},{"name":"Slide Statements","url":"https://refactoring.com/catalog/slideStatements.html"},{"name":"Split Loop","url":"https://refactoring.com/catalog/splitLoop.html"},{"name":"Split Phase","url":"https://refactoring.com/catalog/splitPhase.html"},{"name":"Split Variable","url":"https://refactoring.com/catalog/splitVariable.html"},{"name":"Substitute Algorithm","url":"https://refactoring.com/catalog/substituteAlgorithm.html"}]
+[
+   {
+      "name":"Preserve Whole Object",
+      "url":"https://refactoring.guru/preserve-whole-object"
+   },
+   {
+      "name":"Introduce Local Extension",
+      "url":"https://refactoring.guru/introduce-local-extension"
+   },
+   {
+      "name":"Parameterize Method",
+      "url":"https://refactoring.guru/parameterize-method"
+   },
+   {
+      "name":"Separate Query from Modifier",
+      "url":"https://refactoring.com/catalog/separateQueryFromModifier.html"
+   },
+   {
+      "name":"Slide Statements",
+      "url":"https://refactoring.com/catalog/slideStatements.html"
+   },
+   {
+      "name":"Introduce Assertion",
+      "url":"https://refactoring.com/catalog/introduceAssertion.html"
+   },
+   {
+      "name":"Push Down Field",
+      "url":"https://refactoring.guru/push-down-field"
+   },
+   {
+      "name":"Replace Type Code with Class",
+      "url":"https://refactoring.guru/replace-type-code-with-class"
+   },
+   {
+      "name":"Replace Magic Literal",
+      "url":"https://refactoring.com/catalog/replaceMagicLiteral.html"
+   },
+   {
+      "name":"Collapse Hierarchy",
+      "url":"https://refactoring.com/catalog/collapseHierarchy.html"
+   },
+   {
+      "name":"Remove Control Flag",
+      "url":"https://refactoring.guru/remove-control-flag"
+   },
+   {
+      "name":"Push Down Method",
+      "url":"https://refactoring.com/catalog/pushDownMethod.html"
+   },
+   {
+      "name":"Extract Superclass",
+      "url":"https://refactoring.com/catalog/extractSuperclass.html"
+   },
+   {
+      "name":"Inline Class",
+      "url":"https://refactoring.com/catalog/inlineClass.html"
+   },
+   {
+      "name":"Substitute Algorithm",
+      "url":"https://refactoring.com/catalog/substituteAlgorithm.html"
+   },
+   {
+      "name":"Replace Inline Code with Function Call",
+      "url":"https://refactoring.com/catalog/replaceInlineCodeWithFunctionCall.html"
+   },
+   {
+      "name":"Hide Delegate",
+      "url":"https://refactoring.com/catalog/hideDelegate.html"
+   },
+   {
+      "name":"Replace Type Code with State/Strategy",
+      "url":"https://refactoring.guru/replace-type-code-with-state-strategy"
+   },
+   {
+      "name":"Extract Interface",
+      "url":"https://refactoring.guru/extract-interface"
+   },
+   {
+      "name":"Consolidate Conditional Expression",
+      "url":"https://refactoring.guru/consolidate-conditional-expression"
+   },
+   {
+      "name":"Change Reference to Value",
+      "url":"https://refactoring.guru/change-reference-to-value"
+   },
+   {
+      "name":"Hide Delegate",
+      "url":"https://refactoring.guru/hide-delegate"
+   },
+   {
+      "name":"Return Modified Value",
+      "url":"https://refactoring.com/catalog/returnModifiedValue.html"
+   },
+   {
+      "name":"Move Statements into Function",
+      "url":"https://refactoring.com/catalog/moveStatementsIntoFunction.html"
+   },
+   {
+      "name":"Split Variable",
+      "url":"https://refactoring.com/catalog/splitVariable.html"
+   },
+   {
+      "name":"Pull Up Constructor Body",
+      "url":"https://refactoring.guru/pull-up-constructor-body"
+   },
+   {
+      "name":"Replace Array with Object",
+      "url":"https://refactoring.guru/replace-array-with-object"
+   },
+   {
+      "name":"Move Function",
+      "url":"https://refactoring.com/catalog/moveFunction.html"
+   },
+   {
+      "name":"Remove Setting Method",
+      "url":"https://refactoring.guru/remove-setting-method"
+   },
+   {
+      "name":"Replace Constructor with Factory Method",
+      "url":"https://refactoring.guru/replace-constructor-with-factory-method"
+   },
+   {
+      "name":"Pull Up Method",
+      "url":"https://refactoring.guru/pull-up-method"
+   },
+   {
+      "name":"Rename Field",
+      "url":"https://refactoring.com/catalog/renameField.html"
+   },
+   {
+      "name":"Push Down Field",
+      "url":"https://refactoring.com/catalog/pushDownField.html"
+   },
+   {
+      "name":"Replace Parameter with Method Call",
+      "url":"https://refactoring.guru/replace-parameter-with-method-call"
+   },
+   {
+      "name":"Push Down Method",
+      "url":"https://refactoring.guru/push-down-method"
+   },
+   {
+      "name":"Remove Middle Man",
+      "url":"https://refactoring.com/catalog/removeMiddleMan.html"
+   },
+   {
+      "name":"Replace Subclass with Delegate",
+      "url":"https://refactoring.com/catalog/replaceSubclassWithDelegate.html"
+   },
+   {
+      "name":"Replace Derived Variable with Query",
+      "url":"https://refactoring.com/catalog/replaceDerivedVariableWithQuery.html"
+   },
+   {
+      "name":"Pull Up Constructor Body",
+      "url":"https://refactoring.com/catalog/pullUpConstructorBody.html"
+   },
+   {
+      "name":"Form Template Method",
+      "url":"https://refactoring.guru/form-template-method"
+   },
+   {
+      "name":"Replace Temp with Query",
+      "url":"https://refactoring.guru/replace-temp-with-query"
+   },
+   {
+      "name":"Rename Variable",
+      "url":"https://refactoring.com/catalog/renameVariable.html"
+   },
+   {
+      "name":"Introduce Parameter Object",
+      "url":"https://refactoring.guru/introduce-parameter-object"
+   },
+   {
+      "name":"Replace Exception with Precheck",
+      "url":"https://refactoring.com/catalog/replaceExceptionWithPrecheck.html"
+   },
+   {
+      "name":"Replace Magic Number with Symbolic Constant",
+      "url":"https://refactoring.guru/replace-magic-number-with-symbolic-constant"
+   },
+   {
+      "name":"Combine Functions into Class",
+      "url":"https://refactoring.com/catalog/combineFunctionsIntoClass.html"
+   },
+   {
+      "name":"Rename Method",
+      "url":"https://refactoring.guru/rename-method"
+   },
+   {
+      "name":"Move Field",
+      "url":"https://refactoring.guru/move-field"
+   },
+   {
+      "name":"Replace Conditional with Polymorphism",
+      "url":"https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"
+   },
+   {
+      "name":"Extract Method",
+      "url":"https://refactoring.guru/extract-method"
+   },
+   {
+      "name":"Encapsulate Collection",
+      "url":"https://refactoring.com/catalog/encapsulateCollection.html"
+   },
+   {
+      "name":"Encapsulate Record",
+      "url":"https://refactoring.com/catalog/encapsulateRecord.html"
+   },
+   {
+      "name":"Remove Assignments to Parameters",
+      "url":"https://refactoring.guru/remove-assignments-to-parameters"
+   },
+   {
+      "name":"Change Function Declaration",
+      "url":"https://refactoring.com/catalog/changeFunctionDeclaration.html"
+   },
+   {
+      "name":"Consolidate Duplicate Conditional Fragments",
+      "url":"https://refactoring.guru/consolidate-duplicate-conditional-fragments"
+   },
+   {
+      "name":"Combine Functions into Transform",
+      "url":"https://refactoring.com/catalog/combineFunctionsIntoTransform.html"
+   },
+   {
+      "name":"Replace Parameter with Query",
+      "url":"https://refactoring.com/catalog/replaceParameterWithQuery.html"
+   },
+   {
+      "name":"Encapsulate Variable",
+      "url":"https://refactoring.com/catalog/encapsulateVariable.html"
+   },
+   {
+      "name":"Replace Conditional with Polymorphism",
+      "url":"https://refactoring.guru/replace-conditional-with-polymorphism"
+   },
+   {
+      "name":"Inline Variable",
+      "url":"https://refactoring.com/catalog/inlineVariable.html"
+   },
+   {
+      "name":"Split Phase",
+      "url":"https://refactoring.com/catalog/splitPhase.html"
+   },
+   {
+      "name":"Change Reference to Value",
+      "url":"https://refactoring.com/catalog/changeReferenceToValue.html"
+   },
+   {
+      "name":"Encapsulate Field",
+      "url":"https://refactoring.guru/encapsulate-field"
+   },
+   {
+      "name":"Encapsulate Collection",
+      "url":"https://refactoring.guru/encapsulate-collection"
+   },
+   {
+      "name":"Remove Dead Code",
+      "url":"https://refactoring.com/catalog/removeDeadCode.html"
+   },
+   {
+      "name":"Inline Class",
+      "url":"https://refactoring.guru/inline-class"
+   },
+   {
+      "name":"Decompose Conditional",
+      "url":"https://refactoring.com/catalog/decomposeConditional.html"
+   },
+   {
+      "name":"Replace Temp with Query",
+      "url":"https://refactoring.com/catalog/replaceTempWithQuery.html"
+   },
+   {
+      "name":"Change Bidirectional Association to Unidirectional",
+      "url":"https://refactoring.guru/change-bidirectional-association-to-unidirectional"
+   },
+   {
+      "name":"Extract Variable",
+      "url":"https://refactoring.com/catalog/extractVariable.html"
+   },
+   {
+      "name":"Separate Query from Modifier",
+      "url":"https://refactoring.guru/separate-query-from-modifier"
+   },
+   {
+      "name":"Introduce Null Object",
+      "url":"https://refactoring.guru/introduce-null-object"
+   },
+   {
+      "name":"Change Value to Reference",
+      "url":"https://refactoring.guru/change-value-to-reference"
+   },
+   {
+      "name":"Parameterize Function",
+      "url":"https://refactoring.com/catalog/parameterizeFunction.html"
+   },
+   {
+      "name":"Extract Superclass",
+      "url":"https://refactoring.guru/extract-superclass"
+   },
+   {
+      "name":"Remove Middle Man",
+      "url":"https://refactoring.guru/remove-middle-man"
+   },
+   {
+      "name":"Self Encapsulate Field",
+      "url":"https://refactoring.guru/self-encapsulate-field"
+   },
+   {
+      "name":"Replace Control Flag with Break",
+      "url":"https://refactoring.com/catalog/replaceControlFlagWithBreak.html"
+   },
+   {
+      "name":"Introduce Assertion",
+      "url":"https://refactoring.guru/introduce-assertion"
+   },
+   {
+      "name":"Introduce Parameter Object",
+      "url":"https://refactoring.com/catalog/introduceParameterObject.html"
+   },
+   {
+      "name":"Remove Parameter",
+      "url":"https://refactoring.guru/remove-parameter"
+   },
+   {
+      "name":"Replace Type Code with Subclasses",
+      "url":"https://refactoring.guru/replace-type-code-with-subclasses"
+   },
+   {
+      "name":"Decompose Conditional",
+      "url":"https://refactoring.guru/decompose-conditional"
+   },
+   {
+      "name":"Replace Function with Command",
+      "url":"https://refactoring.com/catalog/replaceFunctionWithCommand.html"
+   },
+   {
+      "name":"Replace Query with Parameter",
+      "url":"https://refactoring.com/catalog/replaceQueryWithParameter.html"
+   },
+   {
+      "name":"Replace Type Code with Subclasses",
+      "url":"https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html"
+   },
+   {
+      "name":"Extract Variable",
+      "url":"https://refactoring.guru/extract-variable"
+   },
+   {
+      "name":"Preserve Whole Object",
+      "url":"https://refactoring.com/catalog/preserveWholeObject.html"
+   },
+   {
+      "name":"Replace Exception with Test",
+      "url":"https://refactoring.guru/replace-exception-with-test"
+   },
+   {
+      "name":"Move Method",
+      "url":"https://refactoring.guru/move-method"
+   },
+   {
+      "name":"Remove Setting Method",
+      "url":"https://refactoring.com/catalog/removeSettingMethod.html"
+   },
+   {
+      "name":"Hide Method",
+      "url":"https://refactoring.guru/hide-method"
+   },
+   {
+      "name":"Remove Subclass",
+      "url":"https://refactoring.com/catalog/removeSubclass.html"
+   },
+   {
+      "name":"Replace Loop with Pipeline",
+      "url":"https://refactoring.com/catalog/replaceLoopWithPipeline.html"
+   },
+   {
+      "name":"Change Unidirectional Association to Bidirectional",
+      "url":"https://refactoring.guru/change-unidirectional-association-to-bidirectional"
+   },
+   {
+      "name":"Change Value to Reference",
+      "url":"https://refactoring.com/catalog/changeValueToReference.html"
+   },
+   {
+      "name":"Inline Temp",
+      "url":"https://refactoring.guru/inline-temp"
+   },
+   {
+      "name":"Replace Superclass with Delegate",
+      "url":"https://refactoring.com/catalog/replaceSuperclassWithDelegate.html"
+   },
+   {
+      "name":"Replace Nested Conditional with Guard Clauses",
+      "url":"https://refactoring.com/catalog/replaceNestedConditionalWithGuardClauses.html"
+   },
+   {
+      "name":"Replace Constructor with Factory Function",
+      "url":"https://refactoring.com/catalog/replaceConstructorWithFactoryFunction.html"
+   },
+   {
+      "name":"Remove Flag Argument",
+      "url":"https://refactoring.com/catalog/removeFlagArgument.html"
+   },
+   {
+      "name":"Substitute Algorithm",
+      "url":"https://refactoring.guru/substitute-algorithm"
+   },
+   {
+      "name":"Pull Up Field",
+      "url":"https://refactoring.guru/pull-up-field"
+   },
+   {
+      "name":"Inline Method",
+      "url":"https://refactoring.guru/inline-method"
+   },
+   {
+      "name":"Pull Up Method",
+      "url":"https://refactoring.com/catalog/pullUpMethod.html"
+   },
+   {
+      "name":"Replace Primitive with Object",
+      "url":"https://refactoring.com/catalog/replacePrimitiveWithObject.html"
+   },
+   {
+      "name":"Replace Inheritance with Delegation",
+      "url":"https://refactoring.guru/replace-inheritance-with-delegation"
+   },
+   {
+      "name":"Duplicate Observed Data",
+      "url":"https://refactoring.guru/duplicate-observed-data"
+   },
+   {
+      "name":"Split Loop",
+      "url":"https://refactoring.com/catalog/splitLoop.html"
+   },
+   {
+      "name":"Move Field",
+      "url":"https://refactoring.com/catalog/moveField.html"
+   },
+   {
+      "name":"Replace Parameter with Explicit Methods",
+      "url":"https://refactoring.guru/replace-parameter-with-explicit-methods"
+   },
+   {
+      "name":"Replace Subclass with Fields",
+      "url":"https://refactoring.guru/replace-subclass-with-fields"
+   },
+   {
+      "name":"Replace Error Code with Exception",
+      "url":"https://refactoring.guru/replace-error-code-with-exception"
+   },
+   {
+      "name":"Replace Delegation with Inheritance",
+      "url":"https://refactoring.guru/replace-delegation-with-inheritance"
+   },
+   {
+      "name":"Replace Nested Conditional with Guard Clauses",
+      "url":"https://refactoring.guru/replace-nested-conditional-with-guard-clauses"
+   },
+   {
+      "name":"Extract Class",
+      "url":"https://refactoring.com/catalog/extractClass.html"
+   },
+   {
+      "name":"Split Temporary Variable",
+      "url":"https://refactoring.guru/split-temporary-variable"
+   },
+   {
+      "name":"Move Statements to Callers",
+      "url":"https://refactoring.com/catalog/moveStatementsToCallers.html"
+   },
+   {
+      "name":"Introduce Special Case",
+      "url":"https://refactoring.com/catalog/introduceSpecialCase.html"
+   },
+   {
+      "name":"Replace Error Code with Exception",
+      "url":"https://refactoring.com/catalog/replaceErrorCodeWithException.html"
+   },
+   {
+      "name":"Replace Method with Method Object",
+      "url":"https://refactoring.guru/replace-method-with-method-object"
+   },
+   {
+      "name":"Extract Class",
+      "url":"https://refactoring.guru/extract-class"
+   },
+   {
+      "name":"Pull Up Field",
+      "url":"https://refactoring.com/catalog/pullUpField.html"
+   },
+   {
+      "name":"Introduce Foreign Method",
+      "url":"https://refactoring.guru/introduce-foreign-method"
+   },
+   {
+      "name":"Add Parameter",
+      "url":"https://refactoring.guru/add-parameter"
+   },
+   {
+      "name":"Replace Data Value with Object",
+      "url":"https://refactoring.guru/replace-data-value-with-object"
+   },
+   {
+      "name":"Consolidate Conditional Expression",
+      "url":"https://refactoring.com/catalog/consolidateConditionalExpression.html"
+   },
+   {
+      "name":"Replace Command with Function",
+      "url":"https://refactoring.com/catalog/replaceCommandWithFunction.html"
+   },
+   {
+      "name":"Inline Function",
+      "url":"https://refactoring.com/catalog/inlineFunction.html"
+   },
+   {
+      "name":"Extract Subclass",
+      "url":"https://refactoring.guru/extract-subclass"
+   },
+   {
+      "name":"Collapse Hierarchy",
+      "url":"https://refactoring.guru/collapse-hierarchy"
+   },
+   {
+      "name":"Extract Function",
+      "url":"https://refactoring.com/catalog/extractFunction.html"
+   }
+]
