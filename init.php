@@ -9,13 +9,13 @@ $autoloadLocations = array(
 );
 foreach ($autoloadLocations as $file) {
     if (file_exists($file)) {
-        define('COMPOSER_AUTOLOAD', $file);
+        $composerAutoloadLocation = $file;
         break;
     }
 }
 
 // Composer autoload require guard
-if (!defined('COMPOSER_AUTOLOAD')) {
+if (!isset($composerAutoloadLocation)) {
     die(
         "You must run the command `composer install` from the terminal "
         . "in the directory '$root' before using this tool.\n"
@@ -23,7 +23,7 @@ if (!defined('COMPOSER_AUTOLOAD')) {
 }
 
 // Load composer autoloader
-$autoload = require_once COMPOSER_AUTOLOAD;
+$autoload = require_once $composerAutoloadLocation;
 
 $app = [];
 
