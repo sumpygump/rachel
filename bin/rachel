@@ -13,7 +13,25 @@ $command = $argv[1] ?? "today";
 $app = require_once(dirname(__DIR__) . "/init.php");
 
 switch ($command) {
+case 'version': //passthru
+case '--version':
+    /* Show version */
+    printf("Rachel %s\n", RACHEL_VERSION);
+    break;
+case 'help': // passthru
+case '--help':
+    /* Show help */
+    $file = file(__FILE__);
+    print implode("", array_slice($file, 3, 6));
+    print "\nUsage: rachel <command> [args]\n";
+    print "\nCommands:\n";
+    print "  today : print today's refactoring\n";
+    print "  date <date> : print refactoring for given date\n";
+    print "  help|--help : show this here help\n";
+    print "  version|--version : show version information\n";
+    break;
 case 'date':
+    /* Show refactoring-of-the-day for a given date */
     if (!isset($argv[2])) {
         print("Missing argument: date\n");
         exit(1);
@@ -21,8 +39,9 @@ case 'date':
     $date = $argv[2];
     printf("Refactoring for %s: %s\n", $date, $app['catalog']->getForDate($date));
     break;
-case 'today':
+case 'today': // passthru
 default:
+    /* Show refactoring-of-the-day */
     printf("%s: Today's refactoring is: %s\n", date('Y-m-d'), $app['catalog']->getForDate());
     break;
 }

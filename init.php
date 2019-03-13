@@ -1,5 +1,14 @@
 <?php
 
+# ▄▄▄            ▄         ▄
+# █  █ ▄▄▄   ▄▄▄ █▄▄   ▄▄  █
+# ██▀   ▄▄█ █    █  █ █▄▄█ █
+# █ ▀▄ ▀▄▄█ ▀▄▄▄ █  █ ▀▄▄▄ ▀▄▄
+#
+# Refactoring assimilation can help everyone learn
+
+define('RACHEL_VERSION', '1.2.1');
+
 // Find where the composer autoload is
 // This tool was installed as a composed dependency or directly
 $root = realpath(__DIR__);
