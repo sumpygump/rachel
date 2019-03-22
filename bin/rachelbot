@@ -7,13 +7,17 @@
 # per line. They look like this:
 # https://hooks.slack.com/services/<hash>/<hash>/<hash>
 
-if [ ! -f .hookurls ]; then
-    echo File .hookurls not found in `pwd`
+# Get directory of this script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+APP="$(dirname $DIR)"
+
+if [ ! -f "$APP/.hookurls" ]; then
+    echo File .hookurls not found in "$APP"
     exit 1
 fi
 
 # Read slack hook urls from file .hookurls
-IFS=$'\r\n' GLOBIGNORE='*' command eval 'HOOKURLS=($(cat .hookurls))'
+IFS=$'\r\n' GLOBIGNORE='*' command eval "HOOKURLS=(\$(cat $APP/.hookurls))"
 
 # Get the refactoring of the day from rachel
 TEXT=`rachel | sed "s/'/’/g"`
@@ -22,9 +26,11 @@ echo $TEXT
 # Post to each hook url
 for url in ${HOOKURLS[*]}
 do
-    echo "Posting to $url"
-    curl -X POST -H 'Content-type: application/js' --data "{'text':'$TEXT'}" ${url}
+    if [[ $url == *"https"* ]]; then
+        echo "Posting to $url"
+        curl -X POST -H 'Content-type: application/js' --data "{'text':'$TEXT'}" ${url}
+        echo
+    fi
 done
 
-echo
 exit 0
