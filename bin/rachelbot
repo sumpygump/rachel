@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# RACHEL BOT
+# Put rachel's refactoring of the day in a slack channel
+
+# Put the slack Webhook URLs into a file .hookurls at the root of rachel, one
+# per line. They look like this:
+# https://hooks.slack.com/services/<hash>/<hash>/<hash>
+
+if [ ! -f .hookurls ]; then
+    echo File .hookurls not found in `pwd`
+    exit 1
+fi
+
+# Read slack hook urls from file .hookurls
+IFS=$'\r\n' GLOBIGNORE='*' command eval 'HOOKURLS=($(cat .hookurls))'
+
+# Get the refactoring of the day from rachel
+TEXT=`rachel | sed "s/'/’/g"`
+echo $TEXT
+
+# Post to each hook url
+for url in ${HOOKURLS[*]}
+do
+    echo "Posting to $url"
+    curl -X POST -H 'Content-type: application/js' --data "{'text':'$TEXT'}" ${url}
+done
+
+echo
+exit 0
