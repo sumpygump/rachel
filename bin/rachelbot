@@ -20,7 +20,7 @@ fi
 IFS=$'\r\n' GLOBIGNORE='*' command eval "HOOKURLS=(\$(cat $APP/.hookurls))"
 
 # Get the refactoring of the day from rachel
-TEXT=`rachel | sed "s/'/’/g"`
+TEXT=`$APP/bin/rachel | sed "s/'/’/g"`
 echo $TEXT
 
 # Post to each hook url
